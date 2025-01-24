@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Welcome To The CILogon Service</title>
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap-Select CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
+    <!-- CILogon-specific CSS -->
+    <link rel="stylesheet" href="./include/cilogon.css" />
+    <!-- CADRE theming -->
+    <link rel="stylesheet" href="cadre.css" />
+    <!-- BioCommons theming 
+    <link rel="stylesheet" href="biocommons.css" /> -->
+  </head>
+
+  <body>
+    <header>
+      <div class="skincilogonlogo">
+        <a target="_blank" href="https://www.cilogon.org/faq">
+        <img src="./images/poweredbycilogon.png" alt="CILogon" title="CILogon Service"/>
+        </a>
+      </div>
+      <div class="logoheader">
+        <h1 aria-label="Welcome To The CILogon OpenID Connect Authorization Service"><span>[CILogon Service]</span></h1>
+      </div>
+    </header>
+    <div class="mt-4 container-fluid">
+      <!-- Main Bootstrap Container -->
+
+      <noscript>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <span>
+            <strong>Notice: </strong> JavaScript is not enabled. 
+            The CILogon Service requires JavaScript for functionality.
+            <a target="_blank" href="https://enable-javascript.com/"
+              class="alert-link">Please Enable JavaScript</a>.
+          </span>
+        </div>
+      </noscript>
+
+      <div class="card text-center col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 mt-3">
+        <h4 class="card-header" id="heading-selectanidp">Select an Identity Provider</h4>
+        <div class="card-body">
+          <form action="/" method="post">
+            <div class="form-group">
+              <select
+                name="providerId"
+                id="providerId"
+                autofocus="autofocus"
+                class="selectpicker mw-100"
+                data-size="20"
+                data-width="fit"
+                data-live-search="true"
+                data-live-search-placeholder="Type to search"
+                data-live-search-normalize="true">
+                <option data-tokens="http://orcid.org/oauth/authorize" value="http://orcid.org/oauth/authorize" selected="selected">ORCID</option>
+                <option data-tokens="https://vho.aaf.edu.au/idp/shibboleth" value="https://vho.aaf.edu.au/idp/shibboleth">AAF Virtual Home</option>
+                <option data-divider="true">
+                </option>
+              </select>
+             <a href="#"
+                tabindex="0"
+                data-trigger="hover click"
+                class="helpcursor"
+                data-toggle="popover"
+                data-html="true"
+                title="Selecting an Identity Provider"
+                data-content="<p>
+            CILogon facilitates secure access to CyberInfrastructure (CI).
+            In order to use the CILogon Service, you must first select
+            an identity provider. An identity provider (IdP) is an
+            organization where you have an account and can log on
+            to gain access to online services.
+        </p>
+        <p>
+            If you are a faculty, staff, or student member of a university
+            or college, please select it for your identity provider.
+            If your school is not listed, please contact <a
+            href='mailto:help@cilogon.org'>help@cilogon.org</a>,
+            and we will try to add your school in the future.
+        </p>
+        <p> If you have a <a target='_blank' href='https://orcid.org/my-orcid'>ORCID</a>, <a target='_blank' href='https://myaccount.google.com'>Google</a>, <a target='_blank' href='https://github.com/settings/profile'>GitHub</a> or <a target='_blank' href='https://account.microsoft.com'>Microsoft</a> account, you can select it for authenticating to the CILogon Service.</p>
+            "><i class="fa fa-question-circle"></i></a>
+            </div>
+            <!-- end div form-group -->
+
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="keepidp"
+                  name="keepidp"/>
+                <label class="form-check-label" for="keepidp">Remember this selection</label>
+                <a
+                  href="#"
+                  tabindex="0"
+                  data-trigger="hover click"
+                  class="helpcursor"
+                  data-toggle="popover"
+                  data-html="true"
+                  data-content="Check this box to bypass the welcome page on subsequent visits and proceed directly to the selected identity provider. You will need to clear your browser's cookies to return here.">
+                  <i class="fa fa-question-circle"></i>
+                </a>
+              </div> <!-- end div form-check -->
+            </div> <!-- end div form-group -->
+            <input
+              type="hidden"
+              name="CSRF"
+              value="e63997a54eeb5f007fd1257cc384ae89"/>
+            <input
+              type="hidden"
+              name="skinname"
+              id="skinname"
+              value="cadre"/>
+            <input
+              type="hidden"
+              name="previouspage"
+              value="WAYF" />
+            <div class="form-group">
+              <div class="form-row align-items-center justify-content-center">
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary submit"
+                    value="Log On"
+                    id="wayflogonbutton"/>
+                </div> <!-- end col-auto -->
+              </div> <!-- end div form-row align-items-center -->
+            </div> <!-- end div form-group -->
+
+            <p class="privacypolicy">
+              By selecting "Log On", you agree to the following:
+              <a target="_blank" href="https://www.cilogon.org/privacy">CILogon's privacy policy</a>, <br>
+              <a target="_blank" href="https://aaf.edu.au/wp-content/uploads/2020/10/AAF_PCY_Privacy-Collection-Notice-2020.pdf">AAF's Privacy Collection Notice</a> &
+              <a target="_blank" href="https://aaf.edu.au/wp-content/uploads/2020/10/AAF_PCY_Privacy-Collection-Notice-2020.pdf">AAF's AUP</a>
+            
+            </p>
+          </form>
+        </div> <!-- End card-body -->
+      </div> <!-- End card -->
+    </div> <!-- Close Main Bootstrap Container -->
+    <div>
+      <p>Can't find your login server? Click <a href="https://registry-test.cadre5safes.org.au/registry/cadreguest01_enroller/cadreguest01_enroller_co_petitions/start/coef:74/efwid:2?return=https%3A%2F%2Ftest.cilogon.aaf.edu.au%2Fauthorize%3Fresponse_type%3Dcode%26skin%3Dcadre%26client_id%3Dcilogon%3A%2Fclient_id%2F34f4a81790b22bc86bca5d949f753265%26redirect_uri%3Dhttps%3A%2F%2Ftest.cadre.ada.edu.au%2Frems%2Foidc-callback%26scope%3Dopenid%2520profile%2520email%2520org.cilogon.userinfo">here</a> to create a new CADRE Guest account</p>
+    </div>
+    <footer class="footer">
+      <p>
+        For questions about this site, please see the
+        <a target="_blank" 
+        href="https://www.cilogon.org/faq">FAQs</a> or send
+        email to <a href="mailto:help@cilogon.aaf.edu.au">help@cilogon.aaf.edu.au</a>.
+      </p>
+      <p>
+        Know <a target="_blank" 
+        href="https://www.cilogon.org/aup">your responsibilities</a>
+        for using the CILogon Service.
+      </p>
+      <p>
+        See <a target="_blank" 
+        href="https://www.cilogon.org/acknowledgements">acknowledgements</a>
+        of support for this site.
+      </p>
+      <p>
+        This service is endored by the 
+        <a target="_blank" href="https://aaf.edu.au/support/resources/">Australian Access Federation (AAF)</a>
+          for access to research services.
+      </p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"
+      integrity="sha256-qo0Cam4XJ0QQ06XnCiCFYBh3GDXU45j3lpUp+em2yBU="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();});
+    </script>
+    <script>
+      $("#collapse-gencert").on('shown.bs.collapse', function(){
+      	$("#password1").focus() });
+    </script>
+    <!-- <script src="./include/cilogon.js"></script>
+  -->
+    <script src="https://test.cilogon.aaf.edu.au/include/cilogon.js"></script>
+
+  </body>
+</html>

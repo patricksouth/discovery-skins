@@ -1,0 +1,180 @@
+html {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    font-family: Arial,sans-serif;
+    color: #030;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+  }
+  img {
+    border-style: none;
+  }
+  a {
+    color: #363;
+    outline: none;
+  }
+  a:link {
+    text-decoration: underline;
+  }
+  a:visited {
+    text-decoration: underline;
+    color: #030;
+  }
+  a:hover, a:active {
+    text-decoration: underline;
+    color: #464;
+  }
+  input[type=checkbox] {
+    min-width: 24px;
+    min-height: 24px;
+  }
+  label {
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+  }
+  .helpcursor {
+    cursor: help;
+  }
+  .btn.btn-primary {
+      font-weight: bold;
+      color: #030;
+      background-color: #aca;
+      border-color: #999;
+  }
+  .btn.btn-primary:hover {
+      font-weight: bold;
+      color: #030;
+      background-color: #8a8;
+      border-color: #030;
+  }
+  .btn.btn-primary.active,
+  .btn.btn-primary.active.focus,
+  .btn.btn-primary.active:focus,
+  .btn.btn-primary.active:hover,
+  .btn.btn-primary:active,
+  .btn.btn-primary:active.focus,
+  .btn.btn-primary:active:focus,
+  .btn.btn-primary:active:hover {
+      font-weight: bold;
+      color: #030;
+      background-color: #cec;
+      border-color: #999;
+  }
+  a.btn.btn-primary,
+  a.btn.btn-primary:link,
+  a.btn.btn-primary:visited,
+  a.btn.btn-primary:hover,
+  a.btn.btn-primary:active {
+      text-decoration: none;
+  }
+  .card.col-lg-6,
+  .card.col-md-8,
+  .card.col-sm-10,
+  .card.col-12 {
+      padding-right: 0px;
+      padding-left: 0px;
+  }
+  .card-header {
+      background-color: rgba(0,192,0,.02);
+  }
+  .card-header .fa {
+      transition: .3s transform ease-in-out;
+  }
+  .card-header .collapsed .fa {
+      transform: rotate(90deg);
+  }
+  .card-header .collapsed .nocollapse {
+      transform: none;
+  }
+  div.logoheader {
+    background: transparent url("/images/cilogon-gradient.jpg") repeat-y top right;
+    height: 80px;
+    width: 100%;
+    min-width: 600px;
+    font-family: Arial,sans-serif;
+  }
+  div.logoheader h1 {
+    background: transparent url("/images/cilogon-header.png") no-repeat top left;
+    margin-top: 8px;
+    margin-left: 5px;
+    width: 273px;
+    height: 64px;
+    float: left;
+  }
+  div.logoheader h1 span {
+    display: none;
+  }
+  div.skincilogonlogo {
+    float: right;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    display: none;
+  }
+  div.skincilogonlogo a,
+  div.skincilogonlogo a:link,
+  div.skincilogonlogo a:visited,
+  div.skincilogonlogo a:hover,
+  div.skincilogonlogo a:active {
+      border-bottom: 0px;
+      text-decoration: none;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* line-height: 60px; */
+    border: 1px solid #888;
+    color: #666;
+    /* margin: 0; */
+    /* margin-top: 2px */
+    /* margin-bottom: 2px; */
+  }
+  .footer p {
+    text-align: center;
+    font-size: small;
+    margin: 0;
+  }
+  .footer a:link {
+    color: #464;
+    text-decoration: none;
+  }
+  .footer a:visited {
+    color: #464;
+    text-decoration: none;
+  }
+  .privacypolicy {
+    margin-top: 2em;
+    margin-bottom: -1em;
+    font-size: small;
+  }
+  .p12certificatelifetime {
+    display: none;
+  }
+  #p12hourglass {
+    display: none;
+    position: absolute;
+    margin-left: 2em;
+  }
+  table tr th {
+    text-align: right;
+    word-wrap: break-word;
+  }
+  table tr td {
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  :focus-visible {
+    box-shadow: 0 0 2px 2px #888;
+  } 
+  

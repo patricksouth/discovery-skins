@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Manage CILogon Cookies</title>
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap-Select CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
+    <!-- CILogon-specific CSS -->
+    <link rel="stylesheet" href="./include/cilogon.css" />
+    <!-- CADRE theming -->
+    <link rel="stylesheet" href="cadre.css" /> 
+    <!-- BioCommons theming 
+    <link rel="stylesheet" href="biocommons.css" /> -->
+  </head>
+
+  <body>
+    <header>
+      <div class="skincilogonlogo">
+        <a target="_blank" href="http://www.cilogon.org/faq/">
+          <img src="poweredbycilogon.png" alt="CILogon" title="CILogon Service"/></a>
+      </div>
+      
+      
+    </header>
+
+    <div class="logoheader">
+      <h1><span>[CILogon Service]</span></h1>
+    </div>
+
+    <div class="mt-4 container-fluid">
+      <!-- Main Bootstrap Container -->
+
+      <noscript>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <span
+            ><strong>Notice: </strong> JavaScript is not enabled. The CILogon
+            Service requires JavaScript for functionality.
+            <a
+              target="_blank"
+              href="https://enable-javascript.com/"
+              class="alert-link"
+              >Please Enable JavaScript</a
+            >.</span
+          >
+        </div>
+      </noscript>
+
+      <form
+        action="/me/"
+        method="post"
+        autocomplete="off"
+        id="form01"
+        class="needs-validation"
+        novalidate="novalidate"
+      >
+        <input
+          type="hidden"
+          name="CSRF"
+          value="ec19ee1d3b19272de760eef3aa072de8"
+        />
+        <div class="card col-sm-10 offset-sm-1">
+          <h5 class="card-header text-center">
+            <a
+              class="d-block"
+              data-toggle="collapse"
+              href="#collapse-aboutme"
+              aria-expanded="true"
+              aria-controls="collapse-aboutme"
+              id="heading-aboutme"
+            >
+              <i class="fa fa-chevron-down pull-right"></i>
+              CILogon Attributes
+            </a>
+          </h5>
+          <div
+            id="collapse-aboutme"
+            class="collapse show"
+            aria-labelledby="heading-aboutme"
+          >
+            <div class="card-body px-5">
+              <div class="card-text my-2">
+                This page allows you to view and (potentially) delete various
+                cookies associated with the
+                <a target="_blank" href="..">CILogon Service</a>. There are
+                three sections below.
+              </div>
+              <!-- end card-text -->
+              <ol>
+                <li>
+                  <b>Browser Cookies</b> - These are &quot;cookies&quot; which
+                  are stored in your browser. They are used as preferences for
+                  the CILogon Service.
+                </li>
+                <li>
+                  <b>Session Variables</b> - These are &quot;short-lived&quot;
+                  values related to your current CILogon session. Deleting any
+                  of these values may require you to re-logon.
+                </li>
+                <li>
+                  <b>Environment Variables</b> - These are values set by the
+                  interaction between your browser and the web server. These are
+                  displayed mainly for information purposes.
+                </li>
+              </ol>
+
+              <div class="card-text my-2">
+                You can delete cookies individually by checking the associated
+                checkbox(es) and clicking the &quot;Delete Checked&quot; button.
+                You can also delete groups of cookies by clicking the
+                &quot;Delete Browser Cookies&quot; button, the &quot;Delete
+                Session Variables&quot; button, or the &quot;Delete ALL&quot;
+                button.
+              </div>
+              <!-- end card-text -->
+              <div class="row align-items-center justify-content-center">
+                <div class="col-auto">
+                  <a class="btn btn-primary form-control" href="/"
+                    >Proceed to the CILogon Service</a
+                  >
+                </div>
+                <!-- end col-auto -->
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary submit form-control"
+                    value="Delete Browser Cookies"
+                  />
+                </div>
+                <!-- end col-auto -->
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary submit form-control"
+                    value="Delete Session Variables"
+                  />
+                </div>
+                <!-- end col-auto -->
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary submit form-control"
+                    value="Delete ALL"
+                  />
+                </div>
+                <!-- end col-auto -->
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary submit form-control"
+                    value="Reload Page"
+                  />
+                </div>
+                <!-- end col-auto -->
+              </div>
+              <!-- end row align-items-center -->
+            </div>
+            <!-- end card-body -->
+          </div>
+          <!-- end collapse-... -->
+        </div>
+        <!-- end card -->
+
+        <div class="card col-sm-10 offset-sm-1">
+          <h5 class="card-header text-center">
+            <a
+              class="d-block"
+              data-toggle="collapse"
+              href="#collapse-cookies"
+              aria-expanded="true"
+              aria-controls="collapse-cookies"
+              id="heading-cookies"
+            >
+              <i class="fa fa-chevron-down pull-right"></i>
+              Browser Cookies
+            </a>
+          </h5>
+          <div
+            id="collapse-cookies"
+            class="collapse show"
+            aria-labelledby="heading-cookies"
+          >
+            <div class="card-body">
+              <table class="table table-striped table-sm table-hover small">
+                <tbody>
+                  <tr title="">
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_browser[]"
+                        value="_dev_cilogon_org"
+                      />
+                    </td>
+                    <th scope="row" style="word-break: break-all">
+                      <samp>_dev_cilogon_org</samp>
+                    </th>
+                    <td><samp>00000000000000</samp></td>
+                  </tr>
+                  <tr
+                    title="For portals previously using the CILogon Delegate service, this is the saved lifetime of the delegated certificate."
+                  >
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_browser[]"
+                        value="portalparams"
+                      />
+                    </td>
+                    <th scope="row" style="word-break: break-all">
+                      <samp>portalparams</samp>
+                    </th>
+                    <td>
+                      <samp
+                        >portal=cilogon:/client_id/00000000000000000000000000000000;https://registry-test.lsst.codes/secure/redirect;openid
+                        email profile org.cilogon.userinfo, keepidp=,
+                        providerId=http://orcid.org/oauth/authorize,
+                        ut=0000000000<br />portal=/cilogon:/client_id/00000000000000000000000000000000;https://data-dev.lsst.cloud/login;openid
+                        email org.cilogon.userinfo, keepidp=,
+                        providerId=http://orcid.org/oauth/authorize,
+                        ut=0000000000</samp
+                      >
+                    </td>
+                  </tr>
+                  <tr title="The previously selected Identity Provider.">
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_browser[]"
+                        value="providerId"
+                      />
+                    </td>
+                    <th scope="row" style="word-break: break-all">
+                      <samp>providerId</samp>
+                    </th>
+                    <td><samp>http://orcid.org/oauth/authorize</samp></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="row align-items-center justify-content-center">
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary submit form-control"
+                    value="Delete Checked"
+                  />
+                </div>
+                <!-- end col-auto -->
+              </div>
+              <!-- end row align-items-center -->
+            </div>
+            <!-- end card-body -->
+          </div>
+          <!-- end collapse-... -->
+        </div>
+        <!-- end card -->
+
+        <div class="card col-sm-10 offset-sm-1">
+          <h5 class="card-header text-center">
+            <a
+              class="d-block"
+              data-toggle="collapse"
+              href="#collapse-session"
+              aria-expanded="true"
+              aria-controls="collapse-session"
+              id="heading-session"
+            >
+              <i class="fa fa-chevron-down pull-right"></i>
+              Session Variables
+            </a>
+          </h5>
+          <div
+            id="collapse-session"
+            class="collapse show"
+            aria-labelledby="heading-session"
+          >
+            <div class="card-body">
+              <table class="table table-striped table-sm table-hover small">
+                <tbody>
+                  <tr title="Authentication Method Ref">
+                    <td>
+                      <input type="checkbox" name="del_session[]" value="amr" />
+                    </td>
+                    <th scope="row"><samp>amr</samp></th>
+                    <td><samp>pwd</samp></td>
+                  </tr>
+                  <tr
+                    title="The Unix timestamp of the last successful user authentication."
+                  >
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="authntime"
+                      />
+                    </td>
+                    <th scope="row"><samp>authntime</samp></th>
+                    <td><samp>0000000000</samp></td>
+                  </tr>
+                  <tr
+                    title="The skin affects the look-and-feel and functionality of the CILogon Service. It is typically specified by a portal."
+                  >
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="cilogon_skin"
+                      />
+                    </td>
+                    <th scope="row"><samp>cilogon_skin</samp></th>
+                    <td><samp>lsst</samp></td>
+                  </tr>
+                  <tr title="ORCID identifier">
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="eduPersonOrcid"
+                      />
+                    </td>
+                    <th scope="row"><samp>eduPersonOrcid</samp></th>
+                    <td><samp>http://orcid.org/0000-0000-0000-0000</samp></td>
+                  </tr>
+                  <tr title="Your given name set by your Identity Provider.">
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="first_name"
+                      />
+                    </td>
+                    <th scope="row"><samp>first_name</samp></th>
+                    <td><samp>Hello</samp></td>
+                  </tr>
+                  <tr
+                    title="The authentication URI of your chosen Identity Provider."
+                  >
+                    <td>
+                      <input type="checkbox" name="del_session[]" value="idp" />
+                    </td>
+                    <th scope="row"><samp>idp</samp></th>
+                    <td><samp>http://orcid.org/oauth/authorize</samp></td>
+                  </tr>
+                  <tr
+                    title="The display name of your chosen Identity Provider."
+                  >
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="idp_display_name"
+                      />
+                    </td>
+                    <th scope="row"><samp>idp_display_name</samp></th>
+                    <td><samp>ORCID</samp></td>
+                  </tr>
+                  <tr title="Your surname set by your Identity Provider.">
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="last_name"
+                      />
+                    </td>
+                    <th scope="row"><samp>last_name</samp></th>
+                    <td><samp>World</samp></td>
+                  </tr>
+                  <tr title="Level of Assurance set by your Identity Provider.">
+                    <td>
+                      <input type="checkbox" name="del_session[]" value="loa" />
+                    </td>
+                    <th scope="row"><samp>loa</samp></th>
+                    <td><samp>openid</samp></td>
+                  </tr>
+                  <tr
+                    title="Your user identifier set by the OpenID Connect Identity Provider."
+                  >
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="oidc"
+                      />
+                    </td>
+                    <th scope="row"><samp>oidc</samp></th>
+                    <td><samp>http://orcid.org/0000-0000-0000-0000</samp></td>
+                  </tr>
+                  <tr
+                    title="The URL to return to after authentication at your chosen Identity Provider."
+                  >
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="responseurl"
+                      />
+                    </td>
+                    <th scope="row"><samp>responseurl</samp></th>
+                    <td><samp>http://dev.cilogon.org/</samp></td>
+                  </tr>
+                  <tr
+                    title="An internal return code when fetching user data from the datastore."
+                  >
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="status"
+                      />
+                    </td>
+                    <th scope="row"><samp>status</samp></th>
+                    <td><samp>2</samp></td>
+                  </tr>
+                  <tr title="The datastore user identifier.">
+                    <td>
+                      <input
+                        type="checkbox"
+                        name="del_session[]"
+                        value="user_uid"
+                      />
+                    </td>
+                    <th scope="row"><samp>user_uid</samp></th>
+                    <td><samp>http://cilogon.org/serverG/users/00000</samp></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="row align-items-center justify-content-center">
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn btn-primary submit form-control"
+                    value="Delete Checked"
+                  />
+                </div>
+                <!-- end col-auto -->
+              </div>
+              <!-- end row align-items-center -->
+            </div>
+            <!-- end card-body -->
+          </div>
+          <!-- end collapse-... -->
+        </div>
+        <!-- end card -->
+
+        <div class="card col-sm-10 offset-sm-1">
+          <h5 class="card-header text-center">
+            <a
+              class="d-block"
+              data-toggle="collapse"
+              href="#collapse-environment"
+              aria-expanded="true"
+              aria-controls="collapse-environment"
+              id="heading-environment"
+            >
+              <i class="fa fa-chevron-down pull-right"></i>
+              Environment Variables
+            </a>
+          </h5>
+          <div
+            id="collapse-environment"
+            class="collapse show"
+            aria-labelledby="heading-environment"
+          >
+            <div class="card-body">
+              <table class="table table-striped table-hover table-sm small">
+                <tbody>
+                  <tr>
+                    <th scope="row"><samp>CONTEXT_DOCUMENT_ROOT</samp></th>
+                    <td><samp>/var/www/html</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>CONTEXT_PREFIX</samp></th>
+                    <td><samp></samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>DOCUMENT_ROOT</samp></th>
+                    <td><samp>/var/www/html</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>GATEWAY_INTERFACE</samp></th>
+                    <td><samp>CGI/1.1</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_ACCEPT</samp></th>
+                    <td>
+                      <samp
+                        >text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</samp
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_ACCEPT_ENCODING</samp></th>
+                    <td><samp>gzip, deflate, br</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_ACCEPT_LANGUAGE</samp></th>
+                    <td><samp>en-CA,en-US;q=0.9,en;q=0.8</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_COOKIE</samp></th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_HOST</samp></th>
+                    <td><samp>dev.cilogon.org</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_USER_AGENT</samp></th>
+                    <td>
+                      <samp
+                        >Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+                        AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0
+                        Safari/605.1.15</samp
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_X_FORWARDED_HOST</samp></th>
+                    <td><samp>dev.cilogon.org</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_X_FORWARDED_PORT</samp></th>
+                    <td><samp>443</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_X_FORWARDED_PROTO</samp></th>
+                    <td><samp>https</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_X_FORWARDED_SERVER</samp></th>
+                    <td><samp>000000000000</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>HTTP_X_REAL_IP</samp></th>
+                    <td><samp>000.000.00.00</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>PATH</samp></th>
+                    <td>
+                      <samp
+                        >/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</samp
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>PHP_SELF</samp></th>
+                    <td><samp>/me/index.php</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>QUERY_STRING</samp></th>
+                    <td><samp></samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>REMOTE_ADDR</samp></th>
+                    <td><samp>00.000.00.00</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>REMOTE_PORT</samp></th>
+                    <td><samp>39214</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>REQUEST_METHOD</samp></th>
+                    <td><samp>GET</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>REQUEST_SCHEME</samp></th>
+                    <td><samp>https</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>REQUEST_TIME</samp></th>
+                    <td><samp>0000000000</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>REQUEST_TIME_FLOAT</samp></th>
+                    <td><samp>00000000000000</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>REQUEST_URI</samp></th>
+                    <td><samp>/me/</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SCRIPT_FILENAME</samp></th>
+                    <td><samp>/var/www/html/me/index.php</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SCRIPT_NAME</samp></th>
+                    <td><samp>/me/index.php</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SCRIPT_URI</samp></th>
+                    <td><samp>https://dev.cilogon.org/me/</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SCRIPT_URL</samp></th>
+                    <td><samp>/me/</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SERVER_ADDR</samp></th>
+                    <td><samp>10.0.4.153</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SERVER_ADMIN</samp></th>
+                    <td><samp>help@cilogon.org</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SERVER_NAME</samp></th>
+                    <td><samp>dev.cilogon.org</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SERVER_PORT</samp></th>
+                    <td><samp>443</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SERVER_PROTOCOL</samp></th>
+                    <td><samp>HTTP/1.1</samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SERVER_SIGNATURE</samp></th>
+                    <td><samp></samp></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>SERVER_SOFTWARE</samp></th>
+                    <td>
+                      <samp>Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips</samp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><samp>UNIQUE_ID</samp></th>
+                    <td><samp>000000000000000000000000000</samp></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end card-body -->
+          </div>
+          <!-- end collapse-... -->
+        </div>
+        <!-- end card -->
+      </form>
+    </div>
+    <!-- Close Main Bootstrap Container -->
+    <footer class="footer">
+      <p>
+        For questions about this site, please see the
+        <a target="_blank" href="http://www.cilogon.org/faq">FAQs</a> or send
+        email to <a href="mailto:help@cilogon.aaf.edu.au">help@cilogon.aaf.edu.au</a>.
+      </p>
+      <p>
+        Know <a target="_blank" href="http://ca.cilogon.org/responsibilities">
+          your responsibilities</a> for using the CILogon Service.
+      </p>
+      <p>
+        See
+        <a target="_blank" href="http://ca.cilogon.org/acknowledgements">acknowledgements</a>
+        of support for this site.
+      </p>
+      <p>
+        This service is endored by the 
+        <a target="_blank" href="https://aaf.edu.au/support/resources/">Australian Access Federation (AAF)</a>
+          for access to research services.
+      </p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"
+      integrity="sha256-qo0Cam4XJ0QQ06XnCiCFYBh3GDXU45j3lpUp+em2yBU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
+    <script>
+      $('#collapse-gencert').on('shown.bs.collapse', function () {
+        $('#password1').focus();
+      });
+    </script>
+    <!-- <script src="./include/cilogon.js"></script>
+  -->
+    <script src="https://test.cilogon.aaf.edu.au/include/cilogon.js"></script>
+  </body>
+</html>
